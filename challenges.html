@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - CyberChallenge Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        .leaderboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .leaderboard-header select {
+            padding: 10px;
+            background: #1a1a4a;
+            color: #e0e0e0;
+            border: 1px solid #66ff66;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 15px;
+        }
+        th, td {
+            padding: 20px;
+            text-align: left;
+        }
+        th {
+            background-color: #0f0f2d;
+            color: #66ff66;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        tr {
+            background: linear-gradient(145deg, #0f0f2d, #1a1a4a);
+            transition: .3s;
+        }
+        tr:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(102,255,102,0.1);
+        }
+        td:first-child, th:first-child {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        td:last-child, th:last-child {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .rank {
+            font-weight: bold;
+            color: #66ff66;
+        }
+        .username {
+            font-weight: bold;
+        }
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            background: #66ff66;
+            color: #0a0a1f;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body style="background-color:black;"></body>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+           
+        </div>
+        <div class="content">
+            <div class="leaderboard-header">
+                <h1>Leaderboard</h1>
+                <select>
+                    <option>Global</option>
+                    <option>Monthly</option>
+                    <option>Weekly</option>
+                </select>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>User</th>
+                        <th>Points</th>
+                        <th>Challenges</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="rank">1</td>
+                        <td class="username">HackMaster3000 <span class="badge">Top Hacker</span></td>
+                        <td>15,000</td>
+                        <td>47</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">2</td>
+                        <td class="username">CyberNinja</td>
+                        <td>14,500</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">3</td>
+                        <td class="username">ByteWizard</td>
+                        <td>14,200</td>
+                        <td>44</td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

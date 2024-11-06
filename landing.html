@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CyberChallenge Platform</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a2e;
+            color: #fff;
+        }
+        .dashboard {
+            display: flex;
+            height: 100%;
+        }
+        .sidebar {
+            width: 250px;
+            background: #16213e;
+            padding: 20px;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .logo {
+            font-size: 24px;
+            color: #0f0;
+            margin-bottom: 30px;
+        }
+        .nav-item {
+            padding: 10px 0;
+            cursor: pointer;
+            transition: .3s;
+        }
+        .nav-item:hover {
+            color: #0f0;
+        }
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .challenge-box {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            transition: .3s;
+        }
+        .challenge-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,255,0,0.2);
+        }
+        .challenge-box h3 {
+            color: #0f0;
+            margin-top: 0;
+        }
+        .difficulty {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        .easy { background: #4caf50; }
+        .medium { background: #ff9800; }
+        .hard { background: #f44336; }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #0f0, #00ff7e);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: .3s;
+        }
+        .btn:hover {
+            background: linear-gradient(90deg, #00ff7e, #0f0);
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <button class="logo">CyberChallenge</button>
+            <button class="nav-item" onclick="location.href = 'landing.html';">Dashboard</button>
+            <button class="nav-item" onclick="location.href = 'challenge.html';">Challenges</button>
+            <button class="nav-item" onclick="location.href = 'leaderboard.html';">Leaderboard</button>
+            <button class="nav-item" onclick="location.href = 'profile.html';">Profile</button>
+            <button class="nav-item" onclick="location.href = 'settings.html';">Settings</button>
+        </div>
+        <div class="content">
+            <h1>Welcome, Hacker!</h1>
+            <p>Choose a challenge to begin your journey:</p>
+            <div class="challenge-grid">
+                <div class="challenge-box">
+                    <h3>Web Exploitation</h3>
+                    <span class="difficulty easy">Easy</span>
+                    <p>Break into a vulnerable web application and extract sensitive data.</p>
+                    <a href="#" class="btn">Start Challenge</a>
+                </div>
+                <div class="challenge-box">
+                    <h3>Network Penetration</h3>
+                    <span class="difficulty medium">Medium</span>
+                    <p>Infiltrate a corporate network and gain administrative access.</p>
+                    <a href="#" class="btn">Start Challenge</a>
+                </div>
+                <div class="challenge-box">
+                    <h3>Cryptography</h3>
+                    <span class="difficulty hard">Hard</span>
+                    <p>Decrypt a series of messages to uncover a hidden conspiracy.</p>
+                    <a href="#" class="btn">Start Challenge</a>
+                </div>
+                <div class="challenge-box">
+                    <h3>Reverse Engineering</h3>
+                    <span class="difficulty medium">Medium</span>
+                    <p>Analyze and modify a binary to bypass its security measures.</p>
+                    <a href="#" class="btn">Start Challenge</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
